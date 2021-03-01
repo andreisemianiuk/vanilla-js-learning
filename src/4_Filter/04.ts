@@ -95,3 +95,15 @@ export const players: PlayersType[] = [
 		}
 	}
 ]
+
+export const filteredByGoals = (arr: PlayersType[],goals: number) => {
+	return arr.filter(a => a.achievments.career.goals > goals)
+}
+
+export const filteredByPasses = (arr: PlayersType[],passes: number) => {
+	return arr.filter(a => a.achievments.career.passes > passes)
+}
+
+export const filteredByLeague = (arr: PlayersType[],league: string) => {
+	return arr.filter(a => a.club.country === league)
+}

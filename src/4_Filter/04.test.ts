@@ -1,6 +1,9 @@
-import { PlayersType } from './04';
+import { filteredByGoals, filteredByLeague, filteredByPasses, PlayersType } from './04';
 
 let players: PlayersType[]
+let goals: number
+let passes: number
+let league: string
 
 beforeEach(() => {
 	players = [
@@ -146,19 +149,22 @@ beforeEach(() => {
 })
 
 test('filter players by goals count more than 300', () => {
-	const result = players.filter(p => p.achievments.career.goals > 300)
+	goals = 300
+	const result = filteredByGoals(players,goals)
 
 	expect(result.length).toBe(3)
 })
 
 test('filter players by passes count more than 100', () => {
-	const result = players.filter(p => p.achievments.career.passes > 100)
+	passes = 100
+	const result = filteredByPasses(players,passes)
 
 	expect(result.length).toBe(2)
 })
 
 test('players should be from Italy league', () => {
-	const result = players.filter(p => p.club.country === 'Italy')
+	league = 'Italy'
+	const result = filteredByLeague(players,league)
 
 	expect(result.length).toBe(2)
 	expect(result[0].name).toBe('Cristiano Ronaldo')
