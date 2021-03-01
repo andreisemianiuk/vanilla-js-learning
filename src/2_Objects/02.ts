@@ -1,4 +1,4 @@
-type StudentType = {
+export type StudentType = {
 	id: number
 	name: string
 	age: number
@@ -19,7 +19,7 @@ type StreetType = {
 	flat: number
 }
 
-type TechType = {
+export type TechType = {
 	id: number
 	title: string	
 }
