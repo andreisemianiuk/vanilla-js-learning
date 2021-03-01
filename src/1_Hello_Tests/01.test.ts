@@ -44,7 +44,13 @@ test('array of strings should be correct', () => {
 	const result2 = splitByWords(phrase2)
 	const result3 = splitByWords(phrase3)
 	
+	expect(result1.length).toBe(2)
 	expect(result1).toStrictEqual(['hello','world'])
+
+
+	expect(result2.length).toBe(5)
 	expect(result2).toStrictEqual(['hey','bro','how','are','you'])
+	
+	expect(result3.length).toBe(4)
 	expect(result3).toStrictEqual(['test','is','cool','technology'])
 })
