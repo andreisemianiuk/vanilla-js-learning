@@ -1,10 +1,12 @@
 import React from 'react'
+import { players } from './4_Filter/04'
+import { Destructuring } from './6_Destructuring/06'
 import './App.css'
 
 function App() {
 	return (
 		<div className='App'>
-			HI
+			<Destructuring messi={players[0]} />
 		</div>
 	)
 }
